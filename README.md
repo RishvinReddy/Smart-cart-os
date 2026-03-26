@@ -196,7 +196,6 @@ Smart Cart OS eliminates all of this:
 </table>
 
 ---
-
 ## 🏗️ System Architecture
 
 <div align="center">
@@ -257,7 +256,6 @@ Smart Cart OS eliminates all of this:
        ▼
 [Running total recalculated → Display updated]
 ```
-
 ---
 
 ## 🛠️ Tech Stack
