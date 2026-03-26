@@ -197,66 +197,50 @@ Smart Cart OS eliminates all of this:
 
 ---
 ## 🏗️ System Architecture
-
-<div align="center">
 ```
-+----------------------------------------------------------------------+
-|                   SMART CART OS  --  SYSTEM OVERVIEW                |
-+----------------------------------------------------------------------+
-|                                                                      |
-|  +--------------------+          +------------------------------+    |
-|  |   CART HARDWARE    |          |      SERVER / FRONTEND       |    |
-|  |                    |          |                              |    |
-|  |  +--------------+  |          |  +--------------------------+|    |
-|  |  |  RFID RC522  |--+--HTTP -->+->|   ESP32 API Handler      ||    |
-|  |  +--------------+  |  POST    |  |  (Node / Flask / Raw)    ||    |
-|  |         |          |          |  +------------+-------------+|    |
-|  |  +------v-------+  |          |               |              |    |
-|  |  |    ESP32     |  |          |               v  WebSocket   |    |
-|  |  |  Dev Board   |  |          |  +--------------------------+|    |
-|  |  +------+-------+  |          |  |   React.js Dashboard     ||    |
-|  |         |          |          |  |  +----------+ +--------+ ||    |
-|  |  +------v-------+  |          |  |  | Cart UI  | |Receipt | ||    |
-|  |  |   Barcode    |  |          |  |  +----------+ +--------+ ||    |
-|  |  |   Scanner    |  |          |  +-----------+--------------+|    |
-|  |  +--------------+  |          |              |               |    |
-|  |                    |          |              v               |    |
-|  |  +--------------+  |          |  +--------------------------+|    |
-|  |  | LED + Buzzer |  |          |  |   Product Catalog DB     ||    |
-|  |  +--------------+  |          |  |   (JSON / SQLite)        ||    |
-|  +--------------------+          |  +--------------------------+|    |
-|                                  +------------------------------+    |
-+----------------------------------------------------------------------+
-```
+SMART CART OS
+=============
 
-</div>
+  [ RFID RC522 ]
+        |
+        | SPI
+        v
+  [   ESP32    ] ---HTTP POST---> [ Backend Server ]
+        |                                |
+  [ Barcode    ]                   WebSocket |
+  [ Scanner    ]                         v
+        |                        [ React Dashboard ]
+  [ LED+Buzzer ]                         |
+                                         v
+                                [ Product Catalog ]
+                                  (JSON / SQLite)
+```
 
 ### 🔄 Data Flow
-
-[Item placed in cart]
-       |
-       v
-[RFID/Barcode Module reads tag/code]
-       |
-       v
-[ESP32 receives tag ID via SPI/Serial]
-       |
-       v
-[ESP32 sends HTTP POST  -->  { tagId: "XXXX" }]
-       |
-       v
-[Server looks up tagId in Product Catalog]
-       |
-       v
-[Server emits product data via WebSocket]
-       |
-       v
-[React Dashboard updates cart in real-time]
-       |
-       v
-[Running total recalculated  -->  Display updated]
-
-
+```
+1. Item placed in cart
+         |
+         v
+2. RFID / Barcode module scans tag
+         |
+         v
+3. ESP32 reads tag via SPI / Serial
+         |
+         v
+4. ESP32 sends HTTP POST { tagId }
+         |
+         v
+5. Server looks up product in catalog
+         |
+         v
+6. Server pushes data via WebSocket
+         |
+         v
+7. React dashboard updates live
+         |
+         v
+8. Running total recalculated
+```
 ## 🛠️ Tech Stack
 
 <div align="center">
