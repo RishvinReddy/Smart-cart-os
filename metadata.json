@@ -1,0 +1,7 @@
+{
+  "name": "Smart Cart OS",
+  "description": "A comprehensive simulation of the Smart Cart software ecosystem, featuring a consumer mobile app and a backend system dashboard.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
