@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Cart OS — AI-Powered Smart Grocery Cart System</title>
+  <meta name="description" content="Smart Cart OS is an AI-powered smart grocery cart system with real-time RFID scanning, a store manager dashboard, mobile shopper interface, and Gemini AI integration." />
+  <meta property="og:title" content="Smart Cart OS" />
+  <meta property="og:description" content="AI-powered smart grocery cart with RFID, real-time dashboard &amp; Gemini AI" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-icon">🛒</div>
+        <span>Smart Cart OS</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#tech">Tech Stack</a>
+        <a href="#team">Team</a>
+        <a href="https://github.com/RishvinReddy/Smart-cart-os" target="_blank" rel="noopener" class="btn-nav-cta">
+          View on GitHub ↗
+        </a>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features" class="mobile-link">Features</a>
+      <a href="#architecture" class="mobile-link">Architecture</a>
+      <a href="#tech" class="mobile-link">Tech Stack</a>
+      <a href="#team" class="mobile-link">Team</a>
+      <a href="https://github.com/RishvinReddy/Smart-cart-os" target="_blank" rel="noopener" class="mobile-link cta-mobile">View on GitHub ↗</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="hero-glow g3"></div>
+
+    <div class="hero-inner">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Final Year Project &middot; 2025–26
+      </div>
+      <h1 class="hero-title reveal">
+        The Future of<br/>
+        <span class="gradient-text">Smart Grocery</span><br/>
+        Shopping
+      </h1>
+      <p class="hero-subtitle reveal">
+        Smart Cart OS combines RFID hardware, edge computing, and Gemini AI
+        to deliver a frictionless, queue-free checkout experience — straight
+        from the cart to your pocket.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="https://github.com/RishvinReddy/Smart-cart-os" target="_blank" rel="noopener" class="btn-primary">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          View Source Code
+        </a>
+        <a href="#features" class="btn-secondary">Explore Features ↓</a>
+      </div>
+
+      <!-- Hero Stats -->
+      <div class="hero-stats reveal">
+        <div class="stat-card">
+          <div class="stat-number">24</div>
+          <div class="stat-label">Products Supported</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">System Layers</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-number">AI</div>
+          <div class="stat-label">Gemini Powered</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-number">RT</div>
+          <div class="stat-label">Real-Time Updates</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FEATURES ════════════════════════════ -->
+  <section id="features">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">Core Features</div>
+        <h2 class="section-title">Everything a smart store needs</h2>
+        <p class="section-subtitle">Three powerful views, one unified system — designed for both shoppers and store managers.</p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card card-wide reveal">
+          <div class="feature-icon icon-indigo">📡</div>
+          <h3>RFID Auto-Scan</h3>
+          <p>Products are detected instantly as they enter the cart via RFID UIDs. The cart updates in real-time — no manual barcode scanning needed.</p>
+          <div class="feature-tags">
+            <span class="tag">ESP32</span>
+            <span class="tag">SPI Protocol</span>
+            <span class="tag">RFID/NFC</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-violet">🤖</div>
+          <h3>Gemini AI Assistant</h3>
+          <p>Ask the cart anything — nutrition info, recipes, allergens, price comparisons — powered by Google Gemini.</p>
+          <div class="feature-tags">
+            <span class="tag">Gemini API</span>
+            <span class="tag">Contextual AI</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-emerald">📱</div>
+          <h3>Mobile Shopper View</h3>
+          <p>Customers see their cart live on their phone, can add/remove items, view nutrition labels, and pay — all without queuing.</p>
+          <div class="feature-tags">
+            <span class="tag">React</span>
+            <span class="tag">PWA-ready</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-amber">📊</div>
+          <h3>Admin Dashboard</h3>
+          <p>Store managers get real-time cart tracking, live database views, system logs, and transaction analytics — all in one screen.</p>
+          <div class="feature-tags">
+            <span class="tag">Analytics</span>
+            <span class="tag">Live DB View</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-rose">🔐</div>
+          <h3>Admin Authentication</h3>
+          <p>Secure, role-based access separates shopper and administrator views. Credentials validated against a backend API.</p>
+          <div class="feature-tags">
+            <span class="tag">JWT-ready</span>
+            <span class="tag">RBAC</span>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-cyan">🗃️</div>
+          <h3>Persistent SQLite DB</h3>
+          <p>All cart sessions, orders, and product data persist across restarts. Easily swappable with PostgreSQL for production.</p>
+          <div class="feature-tags">
+            <span class="tag">SQLite</span>
+            <span class="tag">PostgreSQL-ready</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ARCHITECTURE ════════════════════════ -->
+  <section id="architecture">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">System Design</div>
+        <h2 class="section-title">3-Layer Architecture</h2>
+        <p class="section-subtitle">From RFID chip to cloud — a complete IoT pipeline.</p>
+      </div>
+
+      <div class="arch-flow reveal">
+
+        <div class="arch-layer layer-blue">
+          <div class="arch-layer-icon">⚡</div>
+          <div class="arch-layer-body">
+            <div class="arch-layer-label">Layer 1</div>
+            <h4>Embedded Layer</h4>
+            <p class="arch-layer-sub">ESP32 / Arduino</p>
+            <p>Reads RFID tags via SPI protocol. Maintains a local product cache and streams scan events over MQTT/Serial to the edge gateway.</p>
+          </div>
+        </div>
+
+        <div class="arch-arrow">→</div>
+
+        <div class="arch-layer layer-purple">
+          <div class="arch-layer-icon">🔄</div>
+          <div class="arch-layer-body">
+            <div class="arch-layer-label">Layer 2</div>
+            <h4>Edge Gateway</h4>
+            <p class="arch-layer-sub">Raspberry Pi</p>
+            <p>Aggregates scan data via MQTT. Handles local conflict resolution, offline buffering, and forwards events to the cloud backend.</p>
+          </div>
+        </div>
+
+        <div class="arch-arrow">→</div>
+
+        <div class="arch-layer layer-indigo">
+          <div class="arch-layer-icon">☁️</div>
+          <div class="arch-layer-body">
+            <div class="arch-layer-label">Layer 3</div>
+            <h4>Cloud Backend</h4>
+            <p class="arch-layer-sub">Node.js + Express + SQLite</p>
+            <p>Stores inventory, processes cart transactions, runs analytics, and serves both the admin dashboard and mobile shopper interface.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Data Flow Labels -->
+      <div class="arch-labels reveal">
+        <div class="arch-label">
+          <span class="label-dot dot-blue"></span>
+          RFID → MQTT → Edge
+        </div>
+        <div class="arch-label">
+          <span class="label-dot dot-purple"></span>
+          Edge → REST API → DB
+        </div>
+        <div class="arch-label">
+          <span class="label-dot dot-indigo"></span>
+          DB → React Frontend → User
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ TECH STACK ══════════════════════════ -->
+  <section id="tech">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">Tech Stack</div>
+        <h2 class="section-title">Built with modern tools</h2>
+        <p class="section-subtitle">Production-grade technologies from embedded hardware to AI.</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card reveal">
+          <div class="tech-emoji">⚛️</div>
+          <h4>React 19</h4>
+          <p>Frontend UI with TypeScript</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-emoji">⚡</div>
+          <h4>Vite 6</h4>
+          <p>Lightning-fast dev server & bundler</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-emoji">🟢</div>
+          <h4>Node.js + Express</h4>
+          <p>REST API backend with CORS</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-emoji">🗄️</div>
+          <h4>SQLite / PostgreSQL</h4>
+          <p>Persistent data storage</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-emoji">🤖</div>
+          <h4>Google Gemini AI</h4>
+          <p>Conversational product assistant</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-emoji">📡</div>
+          <h4>RFID / MQTT</h4>
+          <p>Hardware communication layer</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-emoji">🔷</div>
+          <h4>TypeScript</h4>
+          <p>Type-safe codebase across the app</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-emoji">🎨</div>
+          <h4>Lucide React</h4>
+          <p>Clean, consistent icon system</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ TEAM ════════════════════════════════ -->
+  <section id="team">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">The Team</div>
+        <h2 class="section-title">Built by students, for real stores</h2>
+        <p class="section-subtitle">A collaborative final year project at the intersection of IoT, AI, and full-stack engineering.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar av1">R</div>
+          <h4>Rishvin Reddy</h4>
+          <p class="team-role">Full-Stack &amp; AI Integration</p>
+          <a href="https://github.com/RishvinReddy" target="_blank" rel="noopener" class="team-github">github.com/RishvinReddy ↗</a>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar av2">N</div>
+          <h4>Nithya</h4>
+          <p class="team-role">Hardware &amp; Embedded Systems</p>
+          <span class="team-github">RFID &middot; ESP32 &middot; MQTT</span>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar av3">V</div>
+          <h4>Vindhya</h4>
+          <p class="team-role">UI/UX &amp; Mobile Interface</p>
+          <span class="team-github">React &middot; TypeScript &middot; Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ══════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-icon">🛒</div>
+        <span>Smart Cart OS</span>
+      </div>
+      <p class="footer-copy">
+        Open source &middot; MIT License &middot;
+        <a href="https://github.com/RishvinReddy/Smart-cart-os" target="_blank" rel="noopener">github.com/RishvinReddy/Smart-cart-os</a>
+      </p>
+      <p class="footer-small">Final Year Project &middot; 2025–26 &middot; Built with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
